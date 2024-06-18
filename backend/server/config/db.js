@@ -3,7 +3,7 @@ import { config } from 'dotenv';
 
 config(); // Load environment variables
 
-export const connectDB = async () => {
+const connectDB = async () => {
     try {
         const mongoUri = process.env.MONGODB_URL;
         if (!mongoUri) {
@@ -16,3 +16,5 @@ export const connectDB = async () => {
         process.exit(1);
     }
 };
+
+export default connectDB;

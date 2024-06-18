@@ -3,21 +3,21 @@ import mongoose from "mongoose";
 const postSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
+        required: false,
     },
     description: {
         type: String,
-        required: true,
+        required: false,
     },
     image: {
         type: String,
-        required: true,
+        required: false,
     },
     username: {
         type: String,
-        required: true,
+        required: false,
     },
 });
 
-
-export const Post = mongoose.model("Post", postSchema)
+const Post = mongoose.model("Post", postSchema);
+export default Post;
